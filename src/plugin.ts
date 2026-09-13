@@ -11,6 +11,7 @@ import {
   JournalRead,
   JournalSearch,
   JournalWrite,
+  MemoryGet,
   MemoryList,
   MemoryReplace,
   MemorySet,
@@ -70,6 +71,7 @@ export const MemoryPlugin: Plugin = async ({ directory }) => {
 
     tool: {
       memory_list: MemoryList(store),
+      memory_get: MemoryGet(store),
       memory_set: MemorySet(store),
       memory_replace: MemoryReplace(store),
       ...journalTools,
